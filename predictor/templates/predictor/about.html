@@ -1,0 +1,48 @@
+{% extends 'predictor/layout.html' %}
+<!-- load static -->
+{% load static %}
+
+<!-- content -->
+{% block content %}
+<!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>About</h2>
+          <ol>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li>About</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about-us" class="about-us">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row content">
+          <div class="col-lg-6" data-aos="fade-right">
+            <h2>About the Software Cost Prediction Application</h2>
+            <h3>A PhD Thesis by Mrs. Beatrice Akumba</h3>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left">
+            <p>
+              The effort and duration of a software can not be accurately ascertained by a one-side fits all approach, but an estimation can be made by using certain features and deploying a comparative approach.
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> Different machine learning methods are compared for best performance in  making predictions</li>
+              <li><i class="ri-check-double-line"></i> 
+                Predicting system is developed using two machine learning approaches both instances of the linear regression class in python's scikit learn ,
+                which are used to predict the software effort and duration, and afterwards using the kalman filter to get a near accurate estimate of both respectively.
+              </li>
+            </ul>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+{% endblock content %}

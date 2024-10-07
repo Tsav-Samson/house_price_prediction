@@ -1,0 +1,107 @@
+{% extends 'predictor/layout.html' %}
+<!-- load static -->
+{% load static %}
+
+<!-- content -->
+{% block content %}
+<!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>SW DURATION</h2>
+          <ol>
+            <li><a href="{% url 'index' %}">HOME</a></li>
+            <li>SW DURATION</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= About Us Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row content">
+          <div class="col-lg-12 pt-4 pt-lg-0" data-aos="fade-left">
+            <div class="row mt-5 justify-content-center" data-aos="fade-up">
+          <div class="col-lg-10">
+            <form action="{% url 'predict' %}" method="post" >
+                {% csrf_token%}
+              <div class="row">
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                     <label>Organisation id</label>
+                     <input type="number" name="Organisation id" placeholder="Organisation id" class="form-control"/>
+                </div>
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                      <label>Organisation type</label>
+                      <input type="number" name="Organisation type" placeholder="Organisation type" class="form-control"/>
+                </div>
+              </div>
+                <div class="row">
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <label>Size of Organisation</label>
+                    <input type="number" name="Size of Organisation" placeholder="Size of Organisation" class="form-control"/>
+                </div>
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                      <label>Customer Organisation type</label>
+                      <input type="number" name="Customer Organisation type" placeholder="Customer Organisation type" class="form-control"/>
+                </div>
+              </div>
+                <div class="row">
+                <div class="col-md-6 form-group">
+                    <label>Project gain (loss)</label>
+                    <input type="number" name="Project gain (loss)" placeholder="Project gain (loss)" class="form-control"/>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <label>Development type</label>
+                    <input type="number" name="Development type" placeholder="Development type" class="form-control"/>
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <label>Application domain</label>
+                  <input type="number" name="Application domain" placeholder="Application domain" class="form-control"/>
+              </div>
+              <div class="col-md-6 form-group mt-3 mt-md-0">
+                <label>Object points</label>
+                <input type="number" name="Object points" placeholder="Object points" class="form-control"/>
+            </div>
+            </div>
+          <div class="row">
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+              <label>Other sizing method</label>
+              <input type="number" name="Other sizing methods" placeholder="Other sizing method" class="form-control"/>
+          </div>
+          <div class="col-md-6 form-group mt-3 mt-md-0">
+            <label>Estimated size</label>
+            <input type="number" name="Estimated size" placeholder="Estimated Size" class="form-control"/>
+        </div>
+        </div>
+        <div class="row">
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <label>Actual Duration</label>
+                  <input type="number" class="form-control" name="prediction" id="email" value="{{pred}}" placeholder="Duration" readonly>
+                </div>
+                  <!--<div class="col-md-6 form-group mt-3 mt-md-0">
+                    <label>Estimated duration</label>
+                    <input type="number" class="form-control" name="Estimated duration" id="email2" value="{{pred}}" placeholder="Estimated duration" readonly>
+                  </div>-->
+        </div>          
+        <div class="row">
+        <label>&nbsp;</label>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <button type="submit" class="btn btn-outline-primary">Predict</button>
+                </div>
+        </div>
+            </form>
+          </div>
+
+        </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+{% endblock content %}

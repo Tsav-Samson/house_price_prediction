@@ -1,0 +1,77 @@
+{% extends 'predictor/layout.html' %}
+<!-- load static -->
+{% load static %}
+
+<!-- content -->
+{% block content %}
+<section id="hero">
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+      <div class="carousel-inner" role="listbox">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active" style='background-image:url("{% static "assets/img/slide/slide-7.jpg" %}")'>
+        <!-- <div class="carousel-item active" style="background-image:url('{% static 'assets/img/slide/slide-4.jpg'}')"> -->
+          <div class="carousel-container">
+            <div class="carousel-content animate__animated animate__fadeInUp"> 
+              <h2 style="text-align: center">Welcome to <span>SOFTWARE COST PREDICTION</span></h2>
+              <p>Get yourself an estimate of what that software project will require in terms of effort and duration before embarking on development</p>
+              <div class="text-center">
+              <a href="{% url 'kalman' %}" class="btn-get-started">SW EFFORT</a>
+              <a href="{% url 'predict' %}" class="btn-get-started">SW DURATION</a>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item" style="background-image: url('{% static 'assets/img/slide/slide-5.jpg' %}')">
+          <div class="carousel-container">
+            <div class="carousel-content animate__animated animate__fadeInUp">
+                <h2 style="text-align: center">Welcome to <span>SOFTWARE COST PREDICTION</span></h2>
+              <p>Get yourself an estimate of what that software project will in terms of effort and duration before embarking on development</p>
+              <div class="text-center">
+              <a href="{% url 'kalman' %}" class="btn-get-started">SW EFFORT</a>
+              <a href="{% url 'predict' %}" class="btn-get-started">SW DURATION</a>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item" style="background-image: url('{% static 'assets/img/slide/slide-6.jpg'%}')">
+          <div class="carousel-container">
+            <div class="carousel-content animate__animated animate__fadeInUp">
+              <h2 style="text-align: center">Welcome to <span>SOFTWARE COST PREDICTION</span></h2>
+              <p>Get yourself an estimate of what that software project will cost before embarking on development</p>
+              <div class="text-center">
+                <a href="{% url 'kalman' %}" class="btn-get-started">SW EFFORT</a>
+                <a href="{% url 'predict' %}" class="btn-get-started">SW DURATION</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+
+      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+
+
+
+
+  </main><!-- End #main -->
+{% endblock content %}
